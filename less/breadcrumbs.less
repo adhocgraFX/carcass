@@ -1,0 +1,96 @@
+// breadcrumbs
+.breadcrumbs-container {
+
+	nav {
+
+		ol {
+			line-height: 1.4;
+			padding: 0;
+			margin: .5em;
+			list-style-type: none;
+			overflow: hidden;
+			background: transparent;
+			color: @color-breadcrumbs-text;
+
+			li {
+				list-style: none;
+				position: relative;
+				display: block;
+				float: left;
+				padding: 0;
+				margin: 0;
+
+				&.mod-breadcrumbs__here {
+					padding: .25em 0;
+				}
+
+				&.active {
+					padding: .25em 0;
+
+					span.divider {
+						position: relative;
+						float: left;
+						padding: 0 .25em;
+						color: @color-breadcrumbs-text;
+						line-height: 1.4;
+
+						&::before {
+
+						}
+					}
+				}
+
+				span.divider {
+					position: relative;
+					float: left;
+					padding: .25em;
+					color: @color-breadcrumbs-text;
+					line-height: 1.4;
+				}
+
+				a {
+					text-decoration: none;
+					font-weight: normal;
+					position: relative;
+					display: block;
+					float: left;
+					padding: .25em;
+					color: @color-breadcrumbs-text;
+					background: transparent;
+
+					&:hover {
+						color: @color-breadcrumbs-text;
+						background: lighten(@color-breadcrumbs-link, 10%);
+					}
+
+					&:focus, &:active {
+						color: @color-breadcrumbs-text;
+						background: darken(@color-breadcrumbs-link, 10%);
+					}
+				}
+			}
+		}
+	}
+}
+
+.breadcrumb-item.active {
+	color: darken(@color-breadcrumbs-text, 10%);
+}
+
+// media queries // 48 x 16 = 768
+@media screen and (min-width: 47em) {
+
+	.breadcrumbs-container {
+
+		nav {
+
+			ol {
+				.flex-display;
+				.flex-flow(row nowrap) !important;
+				.justify-content(center) !important;
+			}
+		}
+
+	}
+
+}

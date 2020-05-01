@@ -1,0 +1,81 @@
+.go-top, .go-down {
+
+	font-size: 1.5em;
+	text-decoration: none;
+	color: @smoke !important;
+	background: @color-accent;
+
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 0;
+    *border: 0; // Remove the border to prevent IE7's black border on input:focus
+
+    .box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
+
+	opacity: 0.90;
+	filter: Alpha(Opacity=90);
+
+	z-index: 100000;
+
+    &:hover {
+        background: lighten(@color-accent, 10%);
+        .box-shadows(0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
+
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+
+        text-decoration: none !important;
+    }
+
+	&:active {
+		background: darken(@color-accent, 10%);
+        .box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
+	}
+
+    span {
+        font-size: 1.5em;
+    }
+}
+
+.go-top {
+    display: none;
+    position: fixed;
+    bottom: .5em;
+    right: .5em;
+
+    height: 2em;
+    max-height: 2em;
+    width: 2em;
+    padding: .25em;
+    .border-radius(1em);
+}
+
+.go-down {
+    border: 0;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@media all and (min-width: 47em) {
+
+    .go-down {
+        display: block;
+        position: absolute;
+        bottom: .5em;
+        right: .5em;
+
+        height: 2em;
+        max-height: 2em;
+        width: 2em;
+        padding: .25em;
+        .border-radius(1em);
+
+        margin: 0;
+    }
+}
+

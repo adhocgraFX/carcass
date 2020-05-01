@@ -1,0 +1,95 @@
+// #Forms
+
+form {
+	margin-bottom: @paragraph-val;
+}
+
+fieldset {
+	margin-bottom: @paragraph-val;
+}
+
+input,
+textarea,
+select {
+    border: 0 solid transparent;
+    border-bottom: .2em solid @color-link;
+	padding: .5em 1em 0.33em 1em;
+	outline: none;
+	color: @gray;
+	background: @whitesmoke;
+	margin: 0;
+	max-width: 100%;
+	display: block;
+	margin-bottom: .5em;
+
+	&:focus {
+        border: 0 solid transparent;
+        border-bottom: .2em solid @color-link-focus;
+		color: @gray-dark;
+		background: @clouds;
+	}
+}
+
+input[disabled],
+textarea[disabled],
+select[disabled] {
+	border: 0 solid transparent;
+	border-bottom: .2em solid @gray-light;
+	color: @gray-light;
+}
+
+input[readonly],
+textarea[readonly],
+select[readonly] {
+    border: 0 solid transparent;
+    border-bottom: .2em solid @gray-light;
+    color: @gray;
+}
+
+select,
+input[type="color"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime-local"] {
+    font-size: .875em;
+}
+
+input[type="color"] {
+	padding: inherit;
+	color:inherit;
+	background: inherit;
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline;
+}
+
+textarea {
+    min-height: 10em;
+}
+
+label,
+legend {
+    display: block;
+    font-size: .875em;
+
+    span {
+        font-weight: normal;
+        font-size: .875em;
+        color: @gray;
+
+        &.required {
+            color: @color-accent !important;
+        }
+    }
+}

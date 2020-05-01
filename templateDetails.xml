@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.0" type="template" client="site">
+    <name>carcass</name>
+    <version>1.0</version>
+    <creationDate>1/05/2019</creationDate>
+    <author>adhocgraFX</author>
+    <authorEmail>info@adhocgrafx.de</authorEmail>
+    <copyright>Copyright (C) 2005 - 2019 adhocgraFX. All rights reserved.</copyright>
+    <description>
+        <![CDATA[
+		<h1>Carcass / responsive Joomla! 4 template</h1>
+		<p>Created by <a href="http://www.adhocgrafx.de" target="_blank">adhocgraFX | adhocgrafx.de</a>.</p>
+		<br></br>
+		<h4>Modulepositions:</h4>
+		<ul>
+			<li>nav</li>
+			<li>search</li>
+			<li>breadcrumbs</li>
+			<li>slideshow</li>
+			<li>sidebar</li>
+			<li>left_bar</li>
+			<li>top_row</li>
+			<li>bottom_row</li>
+			<li>footer</li>
+			<li>debug</li>
+		</ul>
+		]]>
+    </description>
+    <files>
+        <filename>component.php</filename>
+        <filename>error.php</filename>
+        <filename>favicon.ico</filename>
+        <filename>index.php</filename>
+        <filename>joomla.asset.json</filename>
+        <filename>offline.php</filename>
+        <filename>template_preview.png</filename>
+        <filename>template_thumbnail.png</filename>
+        <filename>templateDetails.xml</filename>
+
+        <folder>css</folder>
+        <folder>fonts</folder>
+        <folder>html</folder>
+        <folder>images</folder>
+        <folder>language</folder>
+        <folder>less</folder>
+        <folder>scripts</folder>
+        <folder>scss</folder>
+    </files>
+
+    <positions>
+        <position>nav</position>
+        <position>search</position>
+        <position>breadcrumbs</position>
+        <position>slides  how</position>
+        <position>sidebar</position>
+        <position>top_row</position>
+        <position>bottom_row</position>
+        <position>footer</position>
+        <position>debug</position>
+    </positions>
+
+    <languages folder="language">
+        <language tag="de-DE">de-DE/de-DE.tpl_carcass.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="options">
+                <field name="Logo and Header Images"
+                       type="spacer"
+                       hr="false">
+                </field>
+                <field name="logo"
+                       type="media"
+                       label="Logo"
+                       description="Select logo image">
+                </field>
+                <field name="headerbackground"
+                       type="media"
+                       label="Header Image"
+                       description="Select header image / Important: add header-img as page class suffix" >
+                </field>
+                <field name="Call-to-action Button"
+                       type="spacer"
+                       hr="false" >
+                </field>
+                <field name="buttontext"
+                       type="text"
+                       default=""
+                       label="Button Text"
+                       description="Button Text"
+                       size="30" >
+                </field>
+                <field name="buttonlink"
+                       type="textarea"
+                       default=""
+                       label="Button Link"
+                       description="Button Link"
+                       filter="raw"
+                       size="100" >
+                </field>
+                <field name="responisive slideshow"
+                       type="spacer"
+                       hr="false" >
+                </field>
+                <field name="slideshow"
+                       type="radio"
+                       default="0"
+                       label="flickity"
+                       description="enable flickity js"
+                       class="btn-group btn-group-yesno" >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="code display"
+                       type="spacer"
+                       hr="false" >
+                </field>
+                <field name="js-prism"
+                       type="radio"
+                       default="0"
+                       label="prism"
+                       description="enable prism js"
+                       class="btn-group btn-group-yesno" >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field name="Google Analytics"
+                       type="spacer"
+                       hr="false" >
+                </field>
+                <field name="analytics"
+                       type="text"
+                       default="UA-XXXXX-X"
+                       label="Google Analytics"
+                       description="Google analytics code; anonym, asynchon"
+                       size="10" >
+                </field>
+
+                <field name="Accept Cookie Option"
+                       type="spacer"
+                       hr="false" >
+                </field>
+                <field name="acceptcookie"
+                       type="radio"
+                       default="0"
+                       label="Accept Cookie"
+                       description="Show accept cookie info"
+                       class="btn-group btn-group-yesno" >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="cookieinfotext"
+                       type="textarea"
+                       default="Cookie info text"
+                       label="Cookie info text"
+                       description="Add your cookie info text"
+                       cols="30"
+                       rows="4"
+                       size="500" >
+                </field>
+                <field name="cookiebuttontext"
+                       type="text"
+                       default="Cookie button caption"
+                       label="Cookie button caption"
+                       description="Add your cookie button caption"
+                       size="30" >
+                </field>
+                <field name="cookielinktext"
+                       type="textarea"
+                       default="Cookie link caption"
+                       label="Cookie link caption"
+                       description="Add your cookie link caption"
+                       size="100" >
+                </field>
+                <field name="cookielink"
+                       type="textarea"
+                       default="http://my_site.de"
+                       label="Cookie info link"
+                       description="Add your cookie info link: http://my_site.de"
+                       filter="raw"
+                       size="100" >
+                </field>
+                <field name="Design Copyright Information"
+                       type="spacer"
+                       hr="false" >
+                </field>
+                <field name="designername"
+                       type="text"
+                       default="my_name"
+                       label="Name"
+                       description="Designers Name"
+                       size="30" >
+                </field>
+                <field name="designersite"
+                       type="textarea"
+                       default="http://my_site.de"
+                       label="Site"
+                       description="Designers Website: http://my_site.de"
+                       filter="raw"
+                       size="100" >
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

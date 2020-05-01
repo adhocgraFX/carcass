@@ -1,0 +1,52 @@
+div.items-more {
+    .make-block;
+    margin: .5em 0;
+    padding: 0;
+    font-size: @font-size-small;
+    border: 1px solid @gainsboro-light;
+
+    ol {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            display: block;
+            position: relative;
+            padding: 0;
+            margin: 0;
+
+            a {
+                text-decoration: none;
+                font-weight: normal;
+                text-shadow: none;
+                text-transform: uppercase;
+                position: relative;
+                float: left;
+                display: block;
+                width: 100%;
+                padding: .5em 1em;
+                margin: 0;
+                color: @color-link;
+                background: @smoke;
+                border-bottom: 1px solid @gainsboro-light;
+
+                -webkit-transition: all 0.3s ease-out;
+                transition: all 0.3s ease-out;
+
+                &:hover,
+                &:focus {
+                    color: @color-link-hover;
+                    background: @gainsboro-lighter;
+                }
+
+                // &.active,
+                &:active {
+                    color: @color-link-visited;
+                    background: @gainsboro-light;
+                }
+            }
+        }
+    }
+}

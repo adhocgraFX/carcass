@@ -1,0 +1,73 @@
+div#system-message {
+    display: block;
+
+    div {
+        display: block;
+
+        &.alert {
+            background-color: @smoke;
+            margin-bottom: 2em;
+            padding: .5em 1em;
+
+            a.close {
+                display: inline-block;
+                float: right;
+                padding: .5em 1em;
+                margin: -.5em -1em;
+                cursor: hand;
+            }
+
+            h4.alert-heading {
+                font-size: 1.125em;
+            }
+
+            div {
+                display: block;
+
+                p.alert-message{
+                    font-size: 1em;
+                }
+            }
+        }
+
+        &.alert-warning {
+            border: 1px solid @color-warning;
+
+            h4.alert-heading,
+            p.alert-message,
+            a.close {
+                color: @color-warning !important;
+            }
+        }
+
+        &.alert-error {
+            border: 1px solid @color-error;
+
+            h4.alert-heading,
+            p.alert-message,
+            a.close {
+                color: @color-error !important;
+            }
+        }
+
+        &.alert-success {
+            border: 1px solid @color-success;
+
+            h4.alert-heading,
+            p.alert-message,
+            a.close {
+                color: @color-success !important;
+            }
+        }
+
+        &.alert-info {
+            border: 1px solid @color-info;
+
+            h4.alert-heading,
+            p.alert-message,
+            a.close {
+                color: @color-info !important;
+            }
+        }
+    }
+}

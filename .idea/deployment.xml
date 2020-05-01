@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="localxampp">
+    <serverData>
+      <paths name="localxampp">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="joomla-4-alpha-12/templates/carcass" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="pasodoble">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

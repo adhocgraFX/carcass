@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "carcass",
+  "version": "4.0.0",
+  "description": "Carcass is a Joomla 4 site template",
+  "license": "GPL-2.0+",
+  "assets": [
+    {
+      "name": "template.carcass.base",
+      "dependencies": [
+        "core",
+        "jquery-noconflict",
+        "bootstrap.js.bundle"
+      ],
+      "scripts": [
+        "user.js"
+      ],
+      "css": [
+        "bootstrap.css",
+        "template.css",
+        "user.css"
+      ]
+    }
+  ]
+}

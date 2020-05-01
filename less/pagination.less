@@ -1,0 +1,81 @@
+// pagination = Artikel-Navigation
+
+div.pagination {
+    .make-block;
+    margin: .5em 0;
+    font-size: .875em;
+
+    // seite ... von ...
+    p.counter {
+        font-weight: normal;
+        display: block;
+        color: @gray-darker;
+        padding: 0 0 .25em .5em;
+        margin: 0 0 1.5em 0;
+        border-bottom: .125em solid @gainsboro;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: .25em 0;
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            position: relative;
+            display: block;
+            float: left;
+            padding: 0;
+            margin: 0;
+
+            a {
+                text-decoration: none;
+                font-weight: normal;
+                position: relative;
+                display: block;
+                float: left;
+                padding: .5em 1em;
+                margin: .25em .25em 0 0;
+                color: @color-accent-text;
+                background: @color-accent;
+
+                &:hover {
+                    background: lighten(@color-accent, 20%);
+                }
+
+                &:focus, &:active {
+                    background: darken(@color-accent, 10%);
+                }
+            }
+        }
+
+        li > span.pagenav {
+            text-decoration: none;
+            font-weight: normal;
+            position: relative;
+            display: block;
+            float: left;
+            padding: .5em 1em;
+            margin: .25em .25em 0 0;
+            color: @concrete-dark;
+            background: @gainsboro-light;
+
+        }
+
+        li.pagination-start {
+
+        }
+
+        li.pagination-prev {
+
+        }
+
+        li.pagination-next {
+
+        }
+
+        li.pagination-end {
+
+        }
+    }
+}

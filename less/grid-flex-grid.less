@@ -1,0 +1,134 @@
+// Mixin
+// base grid loop
+.make-grid(@n, @i: 1) when (@i =< @n) {
+
+    // flex grid
+    .flex-@{i} {
+        .flex(1 1 100%);
+        max-width: 100%;
+    }
+
+    // classic grid
+    .col-@{i} {
+        .flex(1 1 100%);
+        max-width: 100%;
+    }
+
+    .make-grid(@n, (@i + 1));
+}
+
+// grid widths loop
+.make-grid-widths(@n, @i: 1) when (@i =< @n) {
+
+    // flex grow factor grid widths
+    .flex-@{i} {
+        .flex(@i 1 0);
+    }
+
+    // classic grid percentage widths
+    .col-@{i} {
+        .flex(1 1 (@i * 100% / @n));
+        max-width: (@i * 100% / @n);
+    }
+
+    .make-grid-widths(@n, (@i + 1));
+}
+
+// grid
+.row {
+    .box-sizing(border-box);
+
+    .flex-display(flex);
+    .flex(1 1 auto);
+    .flex-flow(row wrap);
+}
+
+.column {
+    .box-sizing(border-box);
+    padding: .5em;
+
+    .flex-display(flex);
+    .flex(1 1 auto);
+    .flex-flow(column nowrap);
+}
+
+.row.reverse {
+    .flex-direction(row-reverse);
+}
+
+.column.reverse {
+    .flex-direction(column-reverse);
+}
+
+// make grid
+.make-grid(@column-number);
+
+// flex container properties
+// justify content
+.start {
+    .justify-content(flex-start);
+    text-align: start;
+}
+
+.center {
+    .justify-content(center);
+    text-align: center;
+}
+
+.end {
+    .justify-content(flex-end);
+    text-align: end;
+}
+
+.around {
+    .justify-content(space-around);
+}
+
+.between {
+    .justify-content(space-between);
+}
+
+// flex items properties
+// align items
+.top {
+    .align-items(flex-start);
+}
+
+.middle {
+    .align-items(center);
+}
+
+.bottom {
+    .align-items(flex-end);
+}
+
+.equal {
+    .align-items(stretch);
+}
+
+// gutter and space
+.gutter {
+    padding: 0;
+}
+
+.space {
+    padding: @space;
+}
+
+@media screen and (min-width: 36em) {
+
+    // make grid widths
+    .make-grid-widths(@column-number);
+
+    .gutter {
+        padding: @gutter;
+    }
+}
+
+@media screen and (min-width: 47em) {
+
+}
+
+@media screen and (min-width: 80em) {
+
+}
