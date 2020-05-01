@@ -23,8 +23,8 @@
 // buttons: background: color-primary -accent; text: color-primary-text -accent-text
 
 // primary- und accent-color nach material design
-@color-primary:         #3949ab;
-@color-accent:          #00acc1;
+@color-primary:         @colorIndigo900;
+@color-accent:          @colorPink600;
 
 // primary und accent text color je nach primary und accent color
 @color-primary-text:    @whitesmoke;
@@ -39,13 +39,13 @@
 
 // color sync
 // brand color mit primary color in sync:
-// @color-brand:           @color-primary;
-// @color-brand-text:      @color-primary-text;
+@color-brand:           @whitesmoke; // background
+@color-brand-text:      @color-primary;
 
 // oder:
 // brand color separat bestimmen
-@color-brand:           @whitesmoke;
-@color-brand-text:      @concrete-dark;
+// @color-brand:           @whitesmoke; // background
+// @color-brand-text:      @concrete-dark;
 
 @color-brand-light:     lighten(@color-brand, 5%);
 @color-brand-lighter:   lighten(@color-brand, 10%);

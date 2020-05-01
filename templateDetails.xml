@@ -66,60 +66,47 @@
     <config>
         <fields name="params">
             <fieldset name="options">
-                <field name="Logo and Header Images"
-                       type="spacer"
-                       hr="false">
-                </field>
                 <field name="logo"
                        type="media"
-                       label="Logo"
+                       label="Logo and Header Images: Logo"
                        description="Select logo image">
                 </field>
                 <field name="headerbackground"
                        type="media"
-                       label="Header Image"
+                       label="Logo and Header Images: Header Image"
                        description="Select header image / Important: add header-img as page class suffix" >
                 </field>
-                <field name="Call-to-action Button"
-                       type="spacer"
-                       hr="false" >
-                </field>
+
                 <field name="buttontext"
                        type="text"
                        default=""
-                       label="Button Text"
+                       label="Call-to-action Button: Button Text"
                        description="Button Text"
                        size="30" >
                 </field>
                 <field name="buttonlink"
                        type="textarea"
                        default=""
-                       label="Button Link"
+                       label="Call-to-action Button: Button Link"
                        description="Button Link"
                        filter="raw"
                        size="100" >
                 </field>
-                <field name="responisive slideshow"
-                       type="spacer"
-                       hr="false" >
-                </field>
+
                 <field name="slideshow"
                        type="radio"
                        default="0"
-                       label="flickity"
+                       label="Responsive slideshow: flickity"
                        description="enable flickity js"
                        class="btn-group btn-group-yesno" >
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
-                <field name="code display"
-                       type="spacer"
-                       hr="false" >
-                </field>
+
                 <field name="js-prism"
                        type="radio"
                        default="0"
-                       label="prism"
+                       label="Code display: prism"
                        description="enable prism js"
                        class="btn-group btn-group-yesno" >
                     <option value="1">JYES</option>
@@ -128,10 +115,6 @@
             </fieldset>
 
             <fieldset name="advanced">
-                <field name="Google Analytics"
-                       type="spacer"
-                       hr="false" >
-                </field>
                 <field name="analytics"
                        type="text"
                        default="UA-XXXXX-X"
@@ -140,14 +123,10 @@
                        size="10" >
                 </field>
 
-                <field name="Accept Cookie Option"
-                       type="spacer"
-                       hr="false" >
-                </field>
                 <field name="acceptcookie"
                        type="radio"
                        default="0"
-                       label="Accept Cookie"
+                       label="Accept Cookie Information"
                        description="Show accept cookie info"
                        class="btn-group btn-group-yesno" >
                     <option value="1">JYES</option>
@@ -184,21 +163,18 @@
                        filter="raw"
                        size="100" >
                 </field>
-                <field name="Design Copyright Information"
-                       type="spacer"
-                       hr="false" >
-                </field>
+
                 <field name="designername"
                        type="text"
                        default="my_name"
-                       label="Name"
+                       label="Design Copyright Information: Name"
                        description="Designers Name"
                        size="30" >
                 </field>
                 <field name="designersite"
                        type="textarea"
                        default="http://my_site.de"
-                       label="Site"
+                       label="Design Copyright Information: Site"
                        description="Designers Website: http://my_site.de"
                        filter="raw"
                        size="100" >
