@@ -285,6 +285,12 @@ div.search-container {
     background-color: transparent;
     margin: 0;
 
+    .card { // bootstrap
+        .justify-content(center);
+        background: transparent;
+        border: 0;
+    }
+
     form.form-search {
         margin: 0;
         width: 100%;
@@ -428,10 +434,12 @@ div.search-container {
                 ul {
                     margin-bottom: 0 !important;
                     margin-top: 0 !important;
-                    list-style: none outside;
+                    list-style-position:  outside;
+                    list-style-type: "▸";
+                    color: @gray-light;
 
                     li {
-                        margin-left: 2em !important;
+                        margin-left: 0 !important;
                         a {
                             border-bottom: 1px solid @gainsboro;
                         }

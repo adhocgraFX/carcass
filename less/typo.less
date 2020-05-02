@@ -245,6 +245,13 @@ dl {
 	dd {
 		font-style: italic;
 		text-indent: 0;
+		margin-inline-start: .5em;
+	}
+
+	dd::before {
+		content: "▸";
+		color: @gray-light;
+		margin-inline-end: .5em;
 	}
 }
 

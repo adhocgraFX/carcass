@@ -157,9 +157,9 @@
                 </field>
                 <field name="cookielink"
                        type="textarea"
-                       default="http://my_site.de"
+                       default="https://my_site.de"
                        label="Cookie info link"
-                       description="Add your cookie info link: http://my_site.de"
+                       description="Add your cookie info link: https://my_site.de"
                        filter="raw"
                        size="100" >
                 </field>
@@ -173,9 +173,9 @@
                 </field>
                 <field name="designersite"
                        type="textarea"
-                       default="http://my_site.de"
+                       default="https://my_site.de"
                        label="Design Copyright Information: Site"
-                       description="Designers Website: http://my_site.de"
+                       description="Designers Website: https://my_site.de"
                        filter="raw"
                        size="100" >
                 </field>

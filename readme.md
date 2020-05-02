@@ -1,13 +1,14 @@
 # Carcass
-
 ## responsive Joomla! 4.x template
-* less
-* adhocgrafx template styleguide
-* skeleton made with Pasodoble RWD Joomla! 3.x template
+###Features:
+* adhocgrafx template styleguide:
+    * pasodoble css > less files
+    * bootstrap css > scss files
+* skeleton made with Pasodoble RWD Joomla! 3.x template:
     * lightweight off-canvas nav
     * aside 
     * flexbox layout
-* Options
+* Options:
     * responsive touchable slides: flickity
     * code display: prism
     * analytics
@@ -15,4 +16,4 @@
 * instagram-like css img filter-classes
 * category blog with cards styling; page-class-suffix
 
-work in progress
+_work in progress ..._
