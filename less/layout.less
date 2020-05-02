@@ -138,7 +138,7 @@ footer {
     background: @color-breadcrumbs-back;
     font-size: .75em;
     padding: 0 1em;
-    height: 3em;
+    // height: 3em;
 }
 
 section.slider-container {
@@ -344,7 +344,6 @@ section.bottom {
 
                             &.leading {
                                 width: 24em;
-                                min-width: 8em;
 
                                 figure {
                                     margin: -1em -1em 0.75em -1em;
@@ -354,7 +353,6 @@ section.bottom {
 
                             &.item {
                                 width: 24em;
-                                min-width: 8em;
 
                                 figure {
                                     margin: -1em -1em 0.75em -1em;
@@ -430,10 +428,11 @@ section.bottom {
 
     .logo-image {
         .flex(1 1 auto);
+        .justify-content(flex-start);
         margin: 0 0 0 1em;
-        width: 4em;
-        max-width: 4em;
-        min-width: 4em;
+        width: 12em;
+        max-width: 14em;
+        min-width: 10em;
         height: 4em;
         padding: 0;
 
@@ -442,6 +441,10 @@ section.bottom {
             width: auto;
             margin: 0;
             padding: 0;
+
+            img {
+                float: left;
+            }
         }
     }
 
