@@ -42,9 +42,10 @@
         <folder>html</folder>
         <folder>images</folder>
         <folder>language</folder>
-        <folder>less</folder>
+        <folder>less-carcass</folder>
+        <folder>scss-carcass</folder>
         <folder>scripts</folder>
-        <folder>scss</folder>
+        <folder>scss-bootstrap</folder>
     </files>
 
     <positions>
