@@ -120,6 +120,7 @@ nav {
       display: inline-block;
       *display: inline;
       zoom: 1;
+      margin-right: -5em;
 
       @include flex-display;
       @include flex-flow(row nowrap);

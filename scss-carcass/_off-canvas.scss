@@ -450,12 +450,13 @@ body {
 
 @media screen and (min-width: 100em) {
 
-  .app-bar-container h1.logo-text {
-    font-size: 4em;
+  // todo alternative pos bei großen devices
+  .navdrawer-container {
+
   }
 
-  .navdrawer-container {
-    // todo alternative pos bei großen devices
+  .app-bar-container h1.logo-text {
+    font-size: 4em;
   }
 }
 
@@ -463,6 +464,7 @@ body {
 
   .app-bar-container h1.logo-text {
     font-size: 1.25em;
+    font-size: 4vw;
   }
 }
 

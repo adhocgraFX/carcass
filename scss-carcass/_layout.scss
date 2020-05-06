@@ -420,9 +420,7 @@ section.bottom {
 
   .search-container {
     @include flex(1 1 auto);
-    width: 12em;
-    max-width: 14em;
-    min-width: 10em;
+    max-width: 12em;
     background-color: transparent;
   }
 
@@ -430,10 +428,8 @@ section.bottom {
     @include flex(1 1 auto);
     @include justify-content(flex-start);
     margin: 0 0 0 1em;
-    width: 12em;
-    max-width: 14em;
-    min-width: 10em;
     height: 4em;
+    max-width: 4em;
     padding: 0;
 
     a {
