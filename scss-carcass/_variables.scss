@@ -1,0 +1,158 @@
+// colors
+
+// body and basic text colors
+$color-body: $smoke;
+$color-body-copy: $concrete-darker;
+$color-heading: $concrete-dark;
+$color-subheading: $concrete;
+
+// alert boxes
+// warning
+$color-warning: $colorOrange500;
+// error
+$color-error: $colorRed500;
+// success
+$color-success: $colorLightGreen500;
+// info
+$color-info: $colorBlue500;
+
+
+// header and footer: background: entweder color-primary; text: color-primary-text
+// oder separat bestimmen über color-brand
+// links: color-accent
+// buttons: background: color-primary -accent; text: color-primary-text -accent-text
+
+// primary- und accent-color nach material design
+$color-primary:         $colorIndigo900;
+$color-accent:          $colorPink600;
+
+// primary und accent text color je nach primary und accent color
+$color-primary-text:    $whitesmoke;
+$color-accent-text:     $whitesmoke;
+
+// section colors
+$color-slider-back:     $gainsboro-dark;
+$color-top-row-back:    $smoke;
+$color-bottom-row-back: $smoke;
+$color-aside-back:      $smoke; // on desktop, on mobile > $primary-color
+$color-footer-back:     #EBEBEB;
+
+// color sync
+// brand color mit primary color in sync:
+$color-brand:           $whitesmoke; // background
+$color-brand-text:      $color-primary;
+
+// oder:
+// brand color separat bestimmen
+// $color-brand:           $whitesmoke; // background
+// $color-brand-text:      $concrete-dark;
+
+$color-brand-light:     lighten($color-brand, 5%);
+$color-brand-lighter:   lighten($color-brand, 10%);
+$color-brand-dark:      darken($color-brand, 5%);
+$color-brand-darker:    darken($color-brand, 10%);
+
+
+// link colors mit accent color in sync
+$color-link:            $color-accent;
+$color-link-hover:      lighten($color-link, 10%);
+$color-link-focus:      darken($color-link, 5%);
+$color-link-active:     darken($color-link, 10%);
+$color-link-visited:    $color-accent; // todo was ist am besten?
+
+// breadcrumbs colors
+$color-breadcrumbs-back: #546e7a;
+$color-breadcrumbs-link: $color-breadcrumbs-back;
+$color-breadcrumbs-text: $smoke;
+
+// Typeplate inspired font variables plus even more ...
+$weight: normal;
+
+$line-height-default:   1.4;
+$line-height-medium:    1.45;
+$line-height-large:     1.5;
+
+$line-height-heading:   1.1;
+
+$font-size-default: 100%;
+$font-size-medium:  112.5%; // percentage value (16 * 112.5% = 18px)
+$font-size-large:   125%; // percentage value (16 * 125% = 20px)
+
+$font-size-small:   87.5%; // percentage value (16 * 87.5% = 14px)
+$font-size-mini:    75%; // percentage value (16 * 75% = 12px)
+
+
+// responsive type scale mixin
+// 3 heading scale modes
+$ratio-default: 1.125; // mobile scale
+$ratio-medium: 1.20; // tablet and medium desktop scale
+$ratio-large: 1.333; // large desktop scale
+
+// font scale:
+// 1.067 — Minor Second
+// 1.125 — Major Second
+// 1.200 — Minor Third
+// 1.250 — Major Third
+// 1.333 — Perfect Fourth
+// 1.414 — Augmented Fourth
+// 1.500 — Perfect Fifth
+// 1.618 — Golden Ratio
+
+
+// primary fonts to select
+$body-font:    'Fira Sans';
+$heading-font: 'Fira Sans';
+$nav-font: 'Fira Sans';
+$mono-font: 'Fira Mono';
+
+$font-path: "../fonts";
+$icon-font-path: "../fonts/icons";
+
+// font-weights to choose and combine
+$thin:          100;
+$hairline:      $thin;
+
+$extra-light:   200;
+
+$light:         300;
+
+$book:          400;
+$normal:        $book;
+
+$medium:        500;
+
+$semibold:      600;
+$demibold:      $semibold;
+
+$bold:          700;
+
+$extra-bold:    800;
+$heavy:         $extra-bold;
+
+$black:         900;
+
+
+// Type-Scale-Unit
+$type-scale-unit-value: em;
+$type-scale-base-value: 1em;
+
+
+// Text Indentation Value, space between paragraphs
+$indent-val: 1.5em;
+$paragraph-val: $indent-val / 2;
+$small-paragraph-val: $indent-val / 4;
+
+
+// flex grid mixin variables
+// column numbers
+$column-number: 12;
+
+// gutters
+$gutter: .5em; // not on mobile
+$space: .5em; // always
+
+
+// bootstrap variables / legacy
+$baseBorderRadius: .2em;
+$baseLineHeight: 20px;
+$shadow: $gainsboro;

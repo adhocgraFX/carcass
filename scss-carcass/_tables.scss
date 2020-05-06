@@ -1,0 +1,165 @@
+table {
+  color: $gray-dark;
+  background: $white;
+  margin: $paragraph-val 0;
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px $gainsboro-darker solid;
+  border-bottom: 1px $gainsboro-darker solid;
+
+  caption {
+    font-size: 87.5%;
+    font-style: italic;
+    color: $gray-dark;
+    padding: .5em;
+  }
+
+  thead {
+    tr {
+      th {
+        text-align: left;
+        vertical-align: middle;
+        padding: .5em;
+        font-weight: bold;
+        color: $gray-light;
+        border-top: 1px solid $gainsboro-darker;
+        border-bottom: 3px $gainsboro-darker solid;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &.nowrap {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      // highlight row on mouse over
+      &:hover td {
+        background: $whitesmoke-dark;
+      }
+
+      td {
+        text-align: left;
+        vertical-align: top;
+        padding: .5em;
+        border-top: 1px solid $gainsboro-darker;
+
+        span.badge {
+          font-weight: normal;
+        }
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &.nowrap {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  tfoot {
+
+    tr {
+      td {
+        font-size: 87.5%;
+        color: $gray;
+        padding: .5em;
+        text-align: left;
+        font-style: italic;
+        border-top: 1px solid $gainsboro-darker;
+
+        span.badge {
+          font-weight: normal;
+        }
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &.nowrap {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  &.table-bordered {
+    border: 1px $gainsboro-darker solid;
+
+    caption {
+
+    }
+
+    thead {
+      th {
+        font-weight: normal;
+        color: $gray-dark;
+        background: $whitesmoke-dark;
+        border-right: 1px $gainsboro-darker solid;
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(2n+2) {
+          background: $whitesmoke;
+        }
+
+        td {
+          border-right: 1px solid $gainsboro-darker;
+
+          &[scope="row"] {
+            background: $whitesmoke;
+          }
+        }
+      }
+    }
+
+    tfoot {
+      td {
+        border-right: 1px solid $gainsboro-darker;
+      }
+    }
+  }
+}
+
+// scrollbare tabellen im responsive web design
+div.table-scrollable {
+  width: 100%;
+  overflow-y: auto;
+  margin: 0 0 $paragraph-val 0;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 3px solid $white;
+    background-color: $concrete;
+  }
+}
+
+// mobile / tablets
+@media all and (max-width: 47em) {
+
+  // scrollbare tabellen im responsive web design
+  div.table-scrollable {
+    table {
+      td, th {
+        // todo hilfslösung
+        min-width: 6em;
+        max-width: 9em;
+      }
+    }
+  }
+}

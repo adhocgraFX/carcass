@@ -1,0 +1,228 @@
+// flickity overrides
+// klassen für boxen
+
+// cell sizes
+.gallery-cell {
+  width: 100%;
+
+  &.size-max,
+  &.size-large,
+  &.size-half,
+  &.size-third {
+    width: 100%;
+  }
+
+  &.height-large {
+    min-height: 16em;
+  }
+
+  &.height-medium {
+    min-height: 8em;
+  }
+
+  &.height-small {
+    min-height: 4em;
+  }
+
+  // bildbeschreibungen
+  div.caption-slider {
+    display: block;
+    position: absolute;
+    // z-index: 1;
+    background: rgba(0,0,0, .4);
+    -webkit-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+    padding: .5em;
+    margin: 0;
+    max-width: 24em;
+
+    p, h1, h2, h3 {
+      color: $smoke;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &.box-flexy {
+    @include flex-display();
+    @include justify-content(space-around);
+
+    div, img {
+      @include flex(0 1 auto);
+      @include align-items(center);
+      @include align-self(center);
+      margin-left: .5em;
+      margin-right: .5em;
+    }
+
+    img {
+      @include flex(none);
+    }
+  }
+
+  // background colors
+  &.box, &.box-flexy {
+    padding: 1em 2em;
+    color: inherit;
+    background: $smoke;
+
+    &.red {
+      color: $smoke;
+      background: $colorRedA400;
+    }
+    &.pink {
+      color: $smoke;
+      background: $colorPinkA400;
+    }
+    &.purple {
+      color: $smoke;
+      background: $colorPurpleA400;
+    }
+    &.deeppurple {
+      color: $smoke;
+      background: $colorDeepPurpleA400;
+    }
+    &.indigo {
+      color: $smoke;
+      background: $colorIndigoA400;
+    }
+    &.blue {
+      color: $smoke;
+      background: $colorBlueA400;
+    }
+    &.lightblue {
+      color: $colorIndigo900;
+      background: $colorLightBlueA400;
+    }
+    &.cyan {
+      color: $colorIndigo900;
+      background: $colorCyanA400;
+    }
+    &.teal {
+      color: $colorIndigo900;
+      background: $colorTealA400;
+    }
+    &.green {
+      color: $colorIndigo900;
+      background: $colorGreenA400;
+    }
+    &.lightgreen {
+      color: $colorIndigo900;
+      background: $colorLightGreenA400;
+    }
+    &.lime {
+      color: $colorIndigo900;
+      background: $colorLimeA400;
+    }
+    &.yellow {
+      color: $colorIndigo900;
+      background: $colorYellowA400;
+    }
+    &.amber {
+      color: $colorIndigo900;
+      background: $colorAmberA400;
+    }
+    &.orange {
+      color: $smoke;
+      background: $colorOrangeA400;
+    }
+    &.deeporange {
+      color: $smoke;
+      background: $colorDeepOrangeA400;
+    }
+    &.brown {
+      color: $smoke;
+      background: $colorBrown600;
+    }
+    &.bluegrey {
+      color: $smoke;
+      background: $colorBlueGrey600;
+    }
+  }
+}
+
+.art-gallery {
+  background: $gray-lighter;
+  padding: 0 0 .5em 0;
+}
+
+.lightbox-gallery {
+  background: $gray-lighter;
+  padding: .5em;
+}
+
+.gallery-main {
+  img {
+    padding: 6px;
+    max-height: 200px;
+    width: auto;
+  }
+}
+
+.gallery-nav {
+  img {
+    padding: 3px;
+    height: 50px;
+    width: auto;
+  }
+}
+
+// media queries
+@media screen and (min-width: 47em) {
+
+  .gallery-main {
+    img {
+      max-height: 400px;
+    }
+  }
+
+  .gallery-nav {
+    img {
+      height: 60px;
+    }
+  }
+
+  .gallery-cell {
+    margin-right: 1em;
+
+    &.box {
+      padding: 1em 3em;
+    }
+
+    &.size-max {
+      width: 100%;
+    }
+    &.size-large {
+      width: 66.666%;
+    }
+
+    &.size-half {
+      width: 50%;
+    }
+
+    &.size-third {
+      width: 33.333%;
+    }
+  }
+}
+
+@media screen and (min-width: 80em) {
+
+  .gallery-cell {
+    &.box {
+      padding: 1em 4em;
+    }
+  }
+
+  .gallery-main {
+    img {
+      max-height: 600px;
+    }
+  }
+
+  .gallery-nav {
+    img {
+      height: 70px;
+    }
+  }
+}

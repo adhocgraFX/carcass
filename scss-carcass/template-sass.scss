@@ -1,0 +1,83 @@
+// J-template / copyright Johannes Hock / 2014 / all rights reserved
+
+// vendor
+// normalize.css v3.0
+@import "vendor/normalize";
+
+// material design color palettes
+@import "palette";
+
+// variables and mixins
+@import "variables";
+@import "mixins";
+
+//
+// flexbox mixins for grid enhancement
+@import "flex";
+@import "grid-flex-grid";
+
+// vendor
+// pocketgrid and mixins
+@import "vendor/pocketgrid";
+
+//
+// overrides and supplements
+@import "basics";
+
+//
+//
+// css basic styles
+
+// typography
+@import "typo";
+
+// tables
+@import "tables";
+
+// icons > kleine Auswahl anstatt kompletter icon-font
+@import "icons";
+
+// fonts
+// auskommentieren, je nachdem
+@import "fonts";
+
+//
+// components
+// blog featured, blog, article
+@import "blog";
+
+// images and media
+@import "images";
+
+// breadcrumbs
+@import "breadcrumbs";
+
+// boxes
+@import "boxes";
+
+// module chrome
+@import "modulechrome";
+
+// nav
+@import "nav";
+
+// layout
+@import "layout";
+
+// google off-canvas
+@import "off-canvas";
+
+// go to top
+@import "go-to-top";
+
+
+// vendor
+// prism code highlighting
+@import "vendor/prism";
+
+// flickity responsive slider
+@import "vendor/flickity";
+@import "gallery-overrides";
+
+//
+// last joomla specific overrides here:
