@@ -2,7 +2,7 @@
 ## responsive Joomla! 4.x template
 ###Features:
 * adhocgrafx template styleguide:
-    * pasodoble css > less files
+    * pasodoble css > scss and less files
     * bootstrap css > scss files
 * skeleton made with Pasodoble RWD Joomla! 3.x template:
     * lightweight off-canvas nav
