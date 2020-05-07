@@ -35,7 +35,7 @@ body {
   left: 0;
   background-color: $color-brand;
   overflow: hidden;
-  z-index: 1;
+  z-index: 2;
   @include box-shadows(0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
   -webkit-transform: translate(0, 0em);
   transform: translate(0, 0em);
@@ -254,7 +254,7 @@ body {
 
   height: 100%;
   background-color: $color-brand;
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -452,7 +452,26 @@ body {
 
   // todo alternative pos bei großen devices
   .navdrawer-container {
+    height: 100%;
+    background-color: $color-brand;
+    z-index: 2;
+    position: absolute;
+    top: 6em;
+    bottom: 0;
+    width: 250px;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
 
+    // reset flexbox
+    display: block;
+
+    &.sticky {
+      top: 0;
+    }
+  }
+
+  .layout, .footer-wrapper {
+    margin-left: 250px !important;
   }
 
   .app-bar-container h1.logo-text {

@@ -296,7 +296,7 @@ section.bottom {
 
         section.content {
           max-width: 100% !important;
-          margin: 0;
+          margin: 1em .5em 1em 1em;
 
           div.blog-item {
             width: 100%;
@@ -525,5 +525,11 @@ section.bottom {
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 100em) {
+  .sticked {
+    padding-top: 0 !important;
   }
 }

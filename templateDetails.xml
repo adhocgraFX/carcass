@@ -44,8 +44,9 @@
         <folder>language</folder>
         <folder>less-carcass</folder>
         <folder>scss-carcass</folder>
+        <folder>less-bootstrap</folder>
+        <folder>styles</folder>
         <folder>scripts</folder>
-        <folder>scss-bootstrap</folder>
     </files>
 
     <positions>

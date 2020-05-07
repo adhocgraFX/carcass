@@ -9,6 +9,13 @@
 nav {
   z-index: 1000;
 
+  .nav-item.current {
+   background: $color-brand-light;
+  }
+
+  .nav-item.active {
+   background: $color-brand-light;
+  }
 
   ul.nav   {
     margin: 0;
@@ -18,22 +25,21 @@ nav {
     zoom: 1;
 
     ul {
-      display: none;
-    }
-
-    li:hover ul {
       display: block;
     }
 
     li {
       margin: 0;
 
-      &.current, &.active {
-        background: $color-brand-light;
+      &:hover ul {
+        display: block;
+      }
+
+      ul {
+        display: none;
       }
 
       &.deeper, &.parent {
-
         a:after {
           display: inline-block;
           font-family: 'adhocicon';
@@ -60,7 +66,12 @@ nav {
           text-decoration: none;
         }
 
-        &:focus, &:active {
+        &:focus {
+          color: $color-brand-text;
+          background: $color-brand-dark;
+        }
+
+        &:active {
           color: $color-brand-text;
           background: $color-brand-dark;
         }
@@ -81,7 +92,6 @@ nav {
 
     li {
       text-align: left;
-      background: darken($color-brand, 10%);
 
       a {
         padding: 1em;
@@ -109,7 +119,7 @@ nav {
 }
 
 // media queries // 48 x 16 = 768
-@media screen and (min-width: 47em) {
+@media screen and (min-width: 47em) and (max-width: 100em) {
 
   nav {
     text-transform: uppercase;
@@ -129,6 +139,10 @@ nav {
       @include flex(1 1 auto);
 
       li {
+
+        &:hover ul {
+          display: block;
+        }
 
         &.current, &.active {
 
@@ -163,6 +177,8 @@ nav {
 
         opacity: 0.90;
         filter: Alpha(Opacity=90);
+
+        display: none;
 
         li {
           text-align: left;
