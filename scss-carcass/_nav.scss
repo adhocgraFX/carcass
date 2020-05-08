@@ -152,8 +152,16 @@ nav {
           height: 4em;
 
           a:after {
-            content: "";
-            margin: 0;
+            display: inline-block;
+            font-family: 'adhocicon';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1em;
+            line-height: 1;
+            margin: 0 .5em;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\e605";
           }
         }
 
@@ -170,6 +178,7 @@ nav {
       ul {
         position: absolute;
         margin: -.5em 0 0 .5em;
+        width: 12em;
         padding: .5em 0;
         background: $smoke;
         @include border-radius($baseBorderRadius);
@@ -194,8 +203,16 @@ nav {
             color: $color-brand-text;
 
             &:before {
-              content: "";
-              margin: 0;
+              display: inline-block;
+              font-family: 'adhocicon';
+              font-style: normal;
+              font-weight: normal;
+              font-size: 1em;
+              line-height: 1;
+              margin: 0 .5em 0 0;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              content: "\e601";
             }
           }
         }
@@ -220,6 +237,67 @@ nav {
   }
 }
 
-@media screen and (min-width: 80em){
+@media screen and (min-width: 100em) {
 
+  nav ul.nav {
+
+    ul {
+      position: absolute;
+      margin: -2.5em 0 0 6em;
+      width: 12em;
+      padding: .5em 0;
+      background: $smoke;
+      @include border-radius($baseBorderRadius);
+      border: 1px solid $color-brand-text;
+
+      opacity: 0.90;
+      filter: Alpha(Opacity=90);
+
+      display: none;
+
+      li {
+        text-align: left;
+        background: $color-brand;
+
+        &.deeper, &.parent {
+          height: 3em;
+        }
+
+        a {
+          padding: 1em;
+          height: 3em;
+          color: $color-brand-text;
+
+          &:before {
+            display: inline-block;
+            font-family: 'adhocicon';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1em;
+            line-height: 1;
+            margin: 0 .5em 0 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\e601";
+          }
+        }
+      }
+
+      ul {
+        display: none;
+
+        position: absolute;
+        margin: -2.5em 0 0 6em;
+        width: 12em;
+
+        li a {
+          padding-left: 1em;
+        }
+      }
+
+      li:hover ul.nav-child {
+        display: block;
+      }
+    }
+  }
 }
