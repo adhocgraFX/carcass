@@ -42,6 +42,7 @@ $buttonlink     = $this->params->get('buttonlink');
 
 // Enable assets
 $wa->enableAsset('template.carcass.base');
+
 // meta data
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 ?>

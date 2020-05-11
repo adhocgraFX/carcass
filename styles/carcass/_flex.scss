@@ -1,38 +1,32 @@
-// Flexbox LESS mixins
+// Flexbox SCSS mixins
 // The spec: http://www.w3.org/TR/css3-flexbox
 // Complete Guide: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+// prefix wird automatisch generiert > nicht mehr nötig
 
 
 // Flexbox display
 // values: flex | inline-flex
-.flex-display(@display: flex) {
-    display: ~"-webkit-@{display}";
-    display: ~"-moz-@{display}";
-    display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
-    display: ~"-ms-@{display}"; // IE11
-    display: @display;
+@mixin flex-display($display: flex){
+
+  display: $display;
 }
 
 // Flex Flow Direction
 // applies to: flex containers
 // flex-direction: row | row-reverse | column | column-reverse
 // default: row
-.flex-direction(@direction: row) {
-    -webkit-flex-direction: @direction;
-    -moz-flex-direction: @direction;
-    -ms-flex-direction: @direction;
-    flex-direction: @direction;
+@mixin flex-direction($direction: row){
+
+  flex-direction: $direction;
 }
 
 // Flex Line Wrapping
 // applies to: flex containers
 // flex-wrap: nowrap | wrap | wrap-reverse
 // default: nowrap
-.flex-wrap(@wrap: nowrap) {
-    -webkit-flex-wrap: @wrap;
-    -moz-flex-wrap:  @wrap;
-    -ms-flex-wrap: @wrap;
-    flex-wrap:  @wrap;
+@mixin flex-wrap($wrap: nowrap){
+
+  flex-wrap:  $wrap;
 }
 
 // Flex Flow values: This is the shorthand for:
@@ -40,11 +34,9 @@
 // applies to: flex containers
 // flex-flow: <flex-direction> || <flex-wrap>
 // default: row nowrap
-.flex-flow(@flow) {
-    -webkit-flex-flow: @flow;
-    -moz-flex-flow: @flow;
-    -ms-flex-flow: @flow;
-    flex-flow: @flow;
+@mixin flex-flow($flow){
+
+  flex-flow: $flow;
 }
 
 // Display Order
@@ -53,48 +45,37 @@
 /* By default, flex items are laid out in the source order.
    However, the order property controls the order in which
    they appear in the flex container. (CSS-TRICKS) */
-.flex-order(@order) {
-	// todo usage?
-    -webkit-box-ordinal-group: @order; //iOS 6-, Safari 3.1-6 */
-    -moz-box-ordinal-group: @order;
-    -ms-flex-order: @order; //IE10
-    -webkit-order: @order; //android 4.3, IE mobile, Safari
-    -moz-order: @order;
-	-ms-order: @order;
-	order: @order;
+@mixin flex-order($order){
+  // todo usage?
+
+  order: $order;
 }
 
 // Flex grow factor
 // applies to: flex items
 // grow value: <number> | unitless, serves as proportion
 // default: 0 = no growth
-.flex-grow(@grow: 0) {
-    -webkit-flex-grow: @grow;
-    -moz-flex-grow: @grow;
-    -ms-flex-grow: @grow;
-    flex-grow: @grow;
+@mixin flex-grow($grow: 0){
+
+  flex-grow: $grow;
 }
 
 // Flex shrink factor
 // applies to: flex items
 // value: <number> | 0 = no shrink
 // default: 1 = shrink
-.flex-shrink(@shrink: 1) {
-    -webkit-flex-shrink: @shrink;
-    -moz-flex-shrink: @shrink;
-    -ms-flex-shrink: @shrink;
-    flex-shrink: @shrink;
+@mixin flex-shrink($shrink: 1){
+
+  flex-shrink: $shrink;
 }
 
 // Flex basis = initial main size of the flex item
 // applies to: flex items
 // value: <width> or <height>
 // default: auto
-.flex-basis(@width: auto) {
-    -webkit-flex-basis: @width;
-    -moz-flex-basis: @width;
-    -ms-flex-basis: @width;
-    flex-basis: @width;
+@mixin flex-basis($width: auto){
+
+  flex-basis: $width;
 }
 
 // flex values:
@@ -105,53 +86,43 @@
 // applies to: flex items
 // value: <positive-number>, initial, auto, or none
 // Default is 0 1 auto
-.flex(@columns: initial) {
-    -webkit-flex: @columns;
-    -moz-flex: @columns;
-    -ms-flex: @columns;
-    flex: @columns;
+@mixin flex($columns: initial){
+
+  flex: $columns;
 }
 
 // Axis Alignment
 // applies to: flex containers
 // justify-content: flex-start | flex-end | center | space-between | space-around
 // default: flex-start
-.justify-content(@justify: flex-start) {
-    -webkit-justify-content: @justify;
-    -moz-justify-content: @justify;
-    -ms-justify-content: @justify;
-    justify-content: @justify;
+@mixin justify-content($justify: flex-start){
+
+  justify-content: $justify;
 }
 
 // Packing Flex Lines
 // applies to: multi-line flex containers
 // align-content: flex-start | flex-end | center | space-between | space-around | stretch
 // default: stretch
-.align-content(@align: stretch) {
-    -webkit-align-content: @align;
-    -moz-align-content: @align;
-    -ms-align-content: @align;
-    align-content: @align;
+@mixin align-content($align: stretch){
+
+  align-content: $align;
 }
 
 // Cross-axis Alignment
 // applies to: flex containers
 // align-items: flex-start | flex-end | center | baseline | stretch
 // default: stretch
-.align-items(@align: stretch) {
-    -webkit-align-items: @align;
-    -moz-align-items: @align;
-    -ms-align-items: @align;
-    align-items: @align;
+@mixin align-items($align: stretch){
+
+  align-items: $align;
 }
 
 // Cross-axis Alignment
 // applies to: flex items
 // align-self: auto | flex-start | flex-end | center | baseline | stretch
 // default: overrides align-items values
-.align-self(@align: auto) {
-    -webkit-align-self: @align;
-    -moz-align-self: @align;
-    -ms-align-self: @align;
-    align-self: @align;
+@mixin align-self($align: auto){
+
+  align-self: $align;
 }
