@@ -253,7 +253,7 @@ body {
   backface-visibility: hidden;
 
   height: 100%;
-  background-color: $color-brand;
+  background-color: $color-nav-back;
   z-index: 3;
   position: fixed;
   top: 0;
@@ -453,7 +453,6 @@ body {
   // todo alternative pos bei großen devices
   .navdrawer-container {
     height: 100%;
-    background-color: $color-brand;
     z-index: 2;
     position: absolute;
     top: 6em;
@@ -461,6 +460,7 @@ body {
     width: 12em;
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
+    border-top: 1px solid $color-brand-darker;
 
     // reset flexbox
     display: block;

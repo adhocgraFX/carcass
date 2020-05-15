@@ -241,9 +241,13 @@ nav {
 
   nav ul.nav {
 
+    li:first-child {
+      border-top: 1px solid $color-brand-darker;
+    }
+
     ul {
       position: absolute;
-      margin: -2.5em 0 0 9em;
+      margin: -2.5em 0 0 6em;
       width: 12em;
       padding: .5em 0;
       background: $smoke;
@@ -287,7 +291,7 @@ nav {
         display: none;
 
         position: absolute;
-        margin: -2.5em 0 0 9em;
+        margin: -2.5em 0 0 6em;
         width: 12em;
 
         li a {

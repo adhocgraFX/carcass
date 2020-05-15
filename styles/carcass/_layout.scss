@@ -36,6 +36,7 @@ section.layout {
 .logo-image {
   overflow: hidden;
   height: 3em;
+  border-bottom: 1px solid $color-brand-darker;
 
   a {
     width: 100%;
@@ -116,7 +117,6 @@ main {
 }
 
 aside {
-  // background: $color-primary;
   background: $color-aside-back;
 
   .module {
@@ -431,6 +431,7 @@ section.bottom {
     height: 4em;
     max-width: 4em;
     padding: 0;
+    border-bottom: 0;
 
     a {
       height: 4em;

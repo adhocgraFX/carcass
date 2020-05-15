@@ -34,8 +34,12 @@ $color-accent-text:     $whitesmoke;
 $color-slider-back:     $gainsboro-dark;
 $color-top-row-back:    $smoke;
 $color-bottom-row-back: $smoke;
-$color-aside-back:      $smoke; // on desktop, on mobile > $primary-color
-$color-footer-back:     #EBEBEB;
+$color-footer-back:     $colorBlueGrey200;
+
+// breadcrumbs colors
+$color-breadcrumbs-back: $colorBlueGrey600;
+$color-breadcrumbs-link: $colorBlueGrey400;
+$color-breadcrumbs-text: $colorBlueGrey50;
 
 // color sync
 // brand color mit primary color in sync:
@@ -52,6 +56,9 @@ $color-brand-lighter:   lighten($color-brand, 10%);
 $color-brand-dark:      darken($color-brand, 5%);
 $color-brand-darker:    darken($color-brand, 10%);
 
+// nav and aside colors
+$color-nav-back:        $color-brand;
+$color-aside-back:      $color-body;
 
 // link colors mit accent color in sync
 $color-link:            $color-accent;
@@ -59,11 +66,6 @@ $color-link-hover:      lighten($color-link, 10%);
 $color-link-focus:      darken($color-link, 5%);
 $color-link-active:     darken($color-link, 10%);
 $color-link-visited:    $color-accent; // todo was ist am besten?
-
-// breadcrumbs colors
-$color-breadcrumbs-back: #546e7a;
-$color-breadcrumbs-link: $color-breadcrumbs-back;
-$color-breadcrumbs-text: $smoke;
 
 // Typeplate inspired font variables plus even more ...
 $weight: normal;
