@@ -231,6 +231,46 @@ body.cards {
   }
 }
 
+body.fifty {
+  section.main-container {
+    max-width: 100% !important;
+
+    main {
+      padding: 0 !important;
+
+      section.content {
+        max-width: 100% !important;
+        margin: 0;
+
+        div.blog-item {
+          // margin: .5em;
+          width: auto;
+          padding-bottom: 0;
+
+          div.blog-item-content {
+            width: 100%;
+            font-size: $font-size-small;
+            // border: 1px solid $gainsboro-light;
+            // @include box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
+
+            figure.item-image {
+              width: 100%;
+              border: 0;
+              margin-bottom: 0;
+            }
+
+            div.item-content {
+              max-width: 32em;
+              margin: 0 auto;
+              padding: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 body.modern {
   main {
     padding: 0 !important;

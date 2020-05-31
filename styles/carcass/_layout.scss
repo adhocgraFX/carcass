@@ -279,8 +279,47 @@ section.bottom {
   body {
     &.slider, &.full-width {
       section.main-container main {
-        section.content  {
+        section.content {
           max-width: 100% !important;
+        }
+      }
+    }
+  }
+
+  body.fifty {
+    section.main-container {
+      max-width: 100% !important;
+
+      main {
+        padding: 0 !important;
+        @include flex(12);
+
+        section.content {
+          max-width: 100% !important;
+          margin: 1em .5em 1em 1em;
+
+          div.blog-item {
+
+            div.blog-item-content {
+
+              @include flex-display;
+              @include flex-flow(column nowrap);
+
+              figure.item-image {
+                @include flex-display;
+                @include flex-flow(column nowrap);
+              }
+
+              div.item-content {
+                max-width: 32em;
+                margin: 0 auto;
+                padding-bottom: 2em;
+
+                @include flex-display;
+                @include flex-flow(column nowrap);
+              }
+            }
+          }
         }
       }
     }
@@ -465,12 +504,46 @@ section.bottom {
 
 @media screen and (min-width: 64em) {
 
+  body.fifty {
+    section.main-container {
+
+      main {
+
+        section.content {
+
+          div.blog-item {
+
+            &:nth-of-type(2n+0) {
+
+              div.blog-item-content {
+                @include flex-flow(row-reverse nowrap);
+              }
+            }
+
+            div.blog-item-content {
+              @include flex-flow(row nowrap);
+
+              figure.item-image {
+                width: 50%;
+              }
+
+              div.item-content {
+                width: 50%;
+                max-width: 32em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   body.masonry {
     section.main-container {
       max-width: 100% !important;
 
       main {
-        section.content  {
+        section.content {
           max-width: 100% !important;
           margin-top: 0;
 
