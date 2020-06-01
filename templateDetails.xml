@@ -69,27 +69,6 @@
                        label="Logo and Header Images: Logo"
                        description="Select logo image">
                 </field>
-                <field name="headerbackground"
-                       type="media"
-                       label="Logo and Header Images: Header Image"
-                       description="Select header image / Important: add header-img as page class suffix" >
-                </field>
-
-                <field name="buttontext"
-                       type="text"
-                       default=""
-                       label="Call-to-action Button: Button Text"
-                       description="Button Text"
-                       size="30" >
-                </field>
-                <field name="buttonlink"
-                       type="textarea"
-                       default=""
-                       label="Call-to-action Button: Button Link"
-                       description="Button Link"
-                       filter="raw"
-                       size="100" >
-                </field>
 
                 <field name="slideshow"
                        type="radio"

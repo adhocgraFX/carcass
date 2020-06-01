@@ -8,8 +8,6 @@ $c_infotext   = $this->params->get('cookieinfotext');
 $c_buttontext = $this->params->get('cookiebuttontext');
 $c_linktext   = $this->params->get('cookielinktext');
 $c_link       = $this->params->get('cookielink');
-// header style
-$headerbackground = $this->params->get('headerbackground');
 // slideshow slider
 $slider       = $this->params->get('slideshow');
 // code display
@@ -85,11 +83,6 @@ $prism       = $this->params->get('js-prism');
 
 <!-- go to top plus sticky nav plus double tap to go-->
 <script type="text/javascript" src="<?php echo $tpath . '/scripts/plugins.js'; ?>"></script>
-
-<!-- go to nav -->
-<?php if (($headerbackground) and ($pageclass=="header-img" || $pageclass == "header-img masonry" || $pageclass == "header-img cards")): ?>
-	<script type="text/javascript" src="<?php echo $tpath . '/scripts/go-to-nav.js'; ?>"></script>
-<?php endif; ?>
 
 <!-- google analytics code asynchron + anonym -->
 <?php if ($analytics != "UA-XXXXX-X"): ?>

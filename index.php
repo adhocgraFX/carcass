@@ -34,11 +34,6 @@ $tpath     = $this->baseurl . '/templates/' . $this->template;
 // get template params
 // logo
 $logo         = $this->params->get('logo');
-// header style
-$headerbackground = $this->params->get('headerbackground');
-// call to action
-$buttontext     = $this->params->get('buttontext');
-$buttonlink     = $this->params->get('buttonlink');
 
 // Enable assets
 $wa->enableAsset('template.carcass.base');
@@ -65,8 +60,6 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- load css options -->
-	<?php include_once('css/template.css.php'); ?>
 </head>
 
 <body class=" <?php echo $pageclass?>
@@ -85,16 +78,6 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
             <button class="sidebar-menu" aria-label="Sidebar"></button>
 	    <?php endif; ?>
     </section>
-	<?php if (($buttontext) and ($buttonlink) and ($pageclass == "header-img")): ?>
-        <section class="app-bar-call-to-action hide-on-tablet">
-            <a href="<?php echo $this->baseurl ?>/<?php echo($buttonlink); ?>"
-               class="call-to-action btn btn-primary btn-lg"><?php echo htmlspecialchars($buttontext); ?> <span
-                        class="icon-arrow-forward"></span></a>
-        </section>
-	<?php endif; ?>
-	<?php if (($headerbackground) and ($pageclass == "header-img" || $pageclass == "header-img cards" || $pageclass == "header-img modern")): ?>
-        <a href="#navdrawer" class="go-down"><span class="icon-chevron-down"></span><p hidden>Navigation</p></a>
-	<?php endif; ?>
 </header>
 
 <nav class="navdrawer-container promote-layer" id="navdrawer" role="navigation">
