@@ -1,5 +1,6 @@
 # Carcass
-## responsive Joomla! 4.x template
+## responsive Joomla! 4 alpha 12 template
+### work in progress
 ###Features:
 * adhocgrafx template styleguide:
     * pasodoble > scss 
@@ -15,5 +16,3 @@
     * accept cookies info
 * instagram-like css img filter-classes
 * category blog with cards styling; page-class-suffix
-
-_work in progress ..._
